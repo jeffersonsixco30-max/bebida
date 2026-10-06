@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript | GuaraFresh</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS propio -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <!-- NOMBRE DE LA MARCA -->
+
+        <a class="navbar-brand nombre-marca fw-bold" href="index.html">
+            GuaraFresh
+        </a>
+
+
+        <!-- BOTÓN PARA CELULAR -->
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- MENÚ -->
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="javascript.html">
+                        JavaScript
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="jquery.html">
+                        jQuery
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="json.html">
+                        JSON
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="hosting.html">
+                        Hosting
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cuestionario.html">
+                        Cuestionario
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     TÍTULO
+========================= -->
+
+<div class="titulo-pagina">
+
+    <h1>
+        JavaScript
+    </h1>
+
+    <p>
+        El lenguaje que permite agregar comportamiento e interacción.
+    </p>
+
+</div>
+
+
+<!-- =========================
+     CONTENIDO
+========================= -->
+
+<main class="container py-5">
+
+
+    <!-- ¿QUÉ ES JAVASCRIPT? -->
+
+    <section class="contenido">
+
+        <h2>
+            ¿Qué es JavaScript?
+        </h2>
+
+        <p>
+            JavaScript es un lenguaje de programación utilizado
+            principalmente para crear páginas web interactivas.
+            Permite responder a las acciones del usuario y modificar
+            el contenido de una página sin tener que recargarla.
+        </p>
+
+    </section>
+
+
+    <!-- HTML CSS JAVASCRIPT -->
+
+    <div class="row g-4 my-4">
+
+
+        <!-- HTML -->
+
+        <div class="col-md-4">
+
+            <div class="card-info">
+
+                <div class="icono">
+                    🧱
+                </div>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Define la estructura y el contenido
+                    de una página web.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CSS -->
+
+        <div class="col-md-4">
+
+            <div class="card-info">
+
+                <div class="icono">
+                    🎨
+                </div>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Define los colores, tamaños, posiciones
+                    y estilos de la página.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- JAVASCRIPT -->
+
+        <div class="col-md-4">
+
+            <div class="card-info">
+
+                <div class="icono">
+                    ⚡
+                </div>
+
+                <h3>
+                    JavaScript
+                </h3>
+
+                <p>
+                    Agrega comportamiento, funciones e
+                    interacción a la página.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONCEPTOS BÁSICOS -->
+
+    <section class="contenido">
+
+        <h2>
+            Conceptos básicos
+        </h2>
+
+        <ul>
+
+            <li>
+                <strong>Variables:</strong>
+                almacenan información que puede utilizar el programa.
+            </li>
+
+            <li>
+                <strong>Funciones:</strong>
+                contienen instrucciones que pueden ejecutarse cuando son necesarias.
+            </li>
+
+            <li>
+                <strong>Eventos:</strong>
+                permiten responder a acciones del usuario,
+                como hacer clic en un botón.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <!-- EJEMPLO PRÁCTICO -->
+
+    <section class="codigo">
+
+        <h3>
+            Ejemplo práctico
+        </h3>
+
+        <p>
+            Este ejemplo utiliza JavaScript para mostrar
+            un mensaje cuando el usuario presiona el botón.
+        </p>
+
+<pre><code>function mostrarMensaje() {
+    alert("La información ayuda a tomar mejores decisiones.");
+}</code></pre>
+
+
+        <button class="btn btn-principal"
+                onclick="mostrarMensaje()">
+
+            Ejecutar JavaScript
+
+        </button>
+
+    </section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 GuaraFresh | Proyecto educativo
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+function mostrarMensaje() {
+
+    alert("La información ayuda a tomar mejores decisiones.");
+
+}
+
+</script>
+
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript |GuaraFresh </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">🛡️ </a>
+
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link active" href="javascript.html">JavaScript</a></li>
+                <li class="nav-item"><a class="nav-link" href="jquery.html">jQuery</a></li>
+                <li class="nav-item"><a class="nav-link" href="json.html">JSON</a></li>
+                <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
+                <li class="nav-item"><a class="nav-link" href="cuestionario.html">Cuestionario</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="titulo-pagina">
+    <h1>JavaScript</h1>
+    <p>El lenguaje que permite agregar comportamiento e interacción.</p>
+</div>
+
+<main class="container py-5">
+
+    <section class="contenido">
+        <h2>¿Qué es JavaScript?</h2>
+
+        <p>
+            JavaScript es un lenguaje de programación utilizado principalmente
+            para crear páginas web interactivas. Permite responder a las acciones
+            del usuario y modificar el contenido de una página.
+        </p>
+    </section>
+
+    <div class="row g-4 my-4">
+
+        <div class="col-md-4">
+            <div class="card-info">
+                <h3>HTML</h3>
+                <p>Define la estructura y el contenido de la página.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-info">
+                <h3>CSS</h3>
+                <p>Define los colores, tamaños, posiciones y estilos.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card-info">
+                <h3>JavaScript</h3>
+                <p>Agrega comportamiento e interacción.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="contenido">
+        <h2>Conceptos básicos</h2>
+
+        <ul>
+            <li><strong>Variables:</strong> almacenan información.</li>
+            <li><strong>Funciones:</strong> contienen instrucciones que pueden ejecutarse.</li>
+            <li><strong>Eventos:</strong> permiten responder a acciones como hacer clic.</li>
+        </ul>
+    </section>
+
+    <section class="codigo">
+        <h3>Ejemplo práctico</h3>
+
+<pre><code>function mostrarMensaje() {
+    alert("La información ayuda a tomar mejores decisiones.");
+}</code></pre>
+
+        <button class="btn btn-principal" onclick="mostrarMensaje()">
+            Ejecutar JavaScript
+        </button>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Decide Bien</p>
+</footer>
+
+<script>
+function mostrarMensaje() {
+    alert("La información ayuda a tomar mejores decisiones.");
+}
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
