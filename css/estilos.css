@@ -4,21 +4,30 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f8fb;
     color: #172a3a;
+    transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* NAVBAR */
+
+/* =========================
+   NAVBAR
+========================= */
 
 .navbar {
     background: #172a3a;
     padding: 15px 0;
 }
 
-.navbar-brand {
-    font-size: 22px;
+.nombre-marca {
+    font-size: 23px;
+    font-weight: bold;
 }
 
 .nav-link {
@@ -31,7 +40,23 @@ body {
     color: #2a9d8f !important;
 }
 
-/* HERO */
+.btn-modo {
+    margin-left: 15px;
+    border: 1px solid white;
+    color: white;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.btn-modo:hover {
+    background: white;
+    color: #172a3a;
+}
+
+
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 600px;
@@ -39,12 +64,17 @@ body {
     align-items: center;
     justify-content: center;
 
-    background: linear-gradient(
-        135deg,
-        #172a3a,
-        #0077b6,
-        #2a9d8f
-    );
+    background:
+        linear-gradient(
+            135deg,
+            rgba(23, 42, 58, 0.92),
+            rgba(0, 119, 182, 0.85),
+            rgba(42, 157, 143, 0.85)
+        ),
+        url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
 
     color: white;
 }
@@ -66,23 +96,10 @@ body {
     line-height: 1.7;
 }
 
-.logo {
-    width: 100px;
-    height: 100px;
-    margin: auto;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: white;
-
-    font-size: 50px;
-}
-
-/* BOTONES */
+/* =========================
+   BOTONES
+========================= */
 
 .btn-principal {
     background: #2a9d8f;
@@ -100,19 +117,21 @@ body {
     transform: translateY(-3px);
 }
 
-/* TITULOS */
+
+/* =========================
+   TÍTULOS
+========================= */
 
 .titulo-pagina {
-    background: linear-gradient(
-        135deg,
-        #172a3a,
-        #0077b6
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #172a3a,
+            #0077b6
+        );
 
     color: white;
-
     text-align: center;
-
     padding: 80px 20px;
 }
 
@@ -125,22 +144,27 @@ body {
     font-size: 18px;
 }
 
-/* TARJETAS */
+
+/* =========================
+   TARJETAS
+========================= */
 
 .card-info {
     background: white;
     padding: 30px;
     border-radius: 15px;
-
     height: 100%;
 
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .card-info:hover {
     transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
 }
 
 .card-info h3 {
@@ -153,16 +177,21 @@ body {
     margin-bottom: 15px;
 }
 
-/* CONTENIDO */
+
+/* =========================
+   CONTENIDO
+========================= */
 
 .contenido {
     background: white;
-
     padding: 30px;
-
     border-radius: 15px;
 
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease;
 }
 
 .contenido h2 {
@@ -174,16 +203,16 @@ body {
     line-height: 1.8;
 }
 
-/* CODIGO */
+
+/* =========================
+   CÓDIGO
+========================= */
 
 .codigo {
     background: #172a3a;
     color: white;
-
     padding: 30px;
-
     margin-top: 30px;
-
     border-radius: 15px;
 }
 
@@ -202,29 +231,28 @@ code {
     color: #9ef01a;
 }
 
-/* MENSAJE JQUERY */
+
+/* =========================
+   JQUERY
+========================= */
 
 .mensaje {
     background: #e8f7f5;
-
     color: #172a3a;
-
     padding: 20px;
-
     margin-bottom: 20px;
-
     border-radius: 10px;
-
     font-size: 18px;
 }
 
-/* SECCION AZUL */
+
+/* =========================
+   SECCIÓN AZUL
+========================= */
 
 .seccion-azul {
     background: #0077b6;
-
     color: white;
-
     padding: 70px 20px;
 }
 
@@ -232,7 +260,90 @@ code {
     margin-bottom: 15px;
 }
 
-/* TABLA */
+
+/* =========================
+   CARRUSEL
+========================= */
+
+#carruselGoogle {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+#carruselGoogle img {
+    height: 450px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.58);
+    border-radius: 15px;
+    padding: 20px;
+    bottom: 30px;
+}
+
+.carousel-caption h2 {
+    font-weight: bold;
+}
+
+
+/* =========================
+   TARJETAS GOOGLE
+========================= */
+
+.herramienta-card {
+    background: white;
+    height: 100%;
+    padding: 30px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border-top: 4px solid #2a9d8f;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.4s ease;
+}
+
+.herramienta-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.14);
+}
+
+.herramienta-icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.herramienta-card h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.herramienta-card p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TEXTO GRIS
+========================= */
+
+.texto-gris {
+    color: #667781;
+}
+
+
+/* =========================
+   TABLA
+========================= */
 
 .table {
     background: white;
@@ -242,47 +353,39 @@ code {
     margin: 0;
 }
 
-/* DOMINIO */
+
+/* =========================
+   DOMINIO
+========================= */
 
 .dominio {
     background: #172a3a;
-
     color: #9ef01a;
-
     padding: 20px;
-
     border-radius: 10px;
-
     font-size: 25px;
-
     text-align: center;
-
     margin: 20px 0;
 }
 
-/* FLUJO DNS */
+
+/* =========================
+   FLUJO DNS
+========================= */
 
 .flujo {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     gap: 10px;
-
     margin: 30px 0;
 }
 
 .flujo div {
     background: #0077b6;
-
     color: white;
-
     padding: 15px 30px;
-
     border-radius: 10px;
-
     font-weight: bold;
 }
 
@@ -290,31 +393,29 @@ code {
     font-size: 25px;
 }
 
-/* CUESTIONARIO */
+
+/* =========================
+   CUESTIONARIO
+========================= */
 
 .pregunta {
     background: white;
-
     padding: 25px;
-
     margin-bottom: 20px;
-
     border-radius: 15px;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    box-shadow:
+        0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
 .pregunta h3 {
     font-size: 20px;
-
     margin-bottom: 20px;
 }
 
 .pregunta label {
     display: block;
-
     padding: 10px;
-
     margin: 5px 0;
 
     background: #f4f8fb;
@@ -330,33 +431,88 @@ code {
 
 #resultado {
     margin-top: 30px;
-
     padding: 25px;
 
     border-radius: 15px;
 
     font-size: 22px;
-
     font-weight: bold;
-
     text-align: center;
 }
 
-/* FOOTER */
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+.animar {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================
+   MODO OSCURO
+========================= */
+
+body.modo-oscuro {
+    background: #101820;
+    color: #e9f1f5;
+}
+
+body.modo-oscuro .contenido,
+body.modo-oscuro .card-info,
+body.modo-oscuro .herramienta-card,
+body.modo-oscuro .pregunta {
+    background: #1b2a34;
+    color: #e9f1f5;
+}
+
+body.modo-oscuro .texto-gris {
+    color: #b9c7ce;
+}
+
+body.modo-oscuro .herramienta-card h3,
+body.modo-oscuro .card-info h3,
+body.modo-oscuro .contenido h2 {
+    color: #4ecdc4;
+}
+
+body.modo-oscuro .pregunta label {
+    background: #263944;
+    color: white;
+}
+
+body.modo-oscuro .pregunta label:hover {
+    background: #31505e;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #172a3a;
-
     color: white;
-
     text-align: center;
-
     padding: 25px;
-
     margin-top: 50px;
 }
 
-/* RESPONSIVE */
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 768px) {
 
@@ -370,6 +526,23 @@ footer {
 
     .hero {
         padding: 80px 20px;
+    }
+
+    #carruselGoogle img {
+        height: 300px;
+    }
+
+    .carousel-caption {
+        bottom: 10px;
+        padding: 10px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 20px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
     }
 
 }
