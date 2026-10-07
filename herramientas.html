@@ -1,0 +1,725 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herramientas de Google | GuaraFresh</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+    <div class="container">
+
+        <a class="navbar-brand nombre-marca fw-bold" href="index.html">
+            GuaraFresh
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="javascript.html">
+                        JavaScript
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="jquery.html">
+                        jQuery
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="json.html">
+                        JSON
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="hosting.html">
+                        Hosting
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="herramientas.html">
+                        Google
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="cuestionario.html">
+                        Cuestionario
+                    </a>
+                </li>
+
+            </ul>
+
+            <!-- MODO OSCURO -->
+
+            <button id="modoOscuro"
+                    class="btn btn-modo"
+                    type="button">
+
+                🌙
+
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     TÍTULO
+========================= -->
+
+<section class="titulo-pagina">
+
+    <div class="container">
+
+        <h1>
+            15 herramientas de Google
+        </h1>
+
+        <p>
+            Herramientas digitales para estudiar, trabajar,
+            comunicarse y organizar información.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRODUCCIÓN
+========================= -->
+
+<section class="container py-5">
+
+    <div class="contenido">
+
+        <h2>
+            Herramientas de Google
+        </h2>
+
+        <p>
+            Google ofrece diferentes herramientas que permiten
+            realizar actividades como crear documentos,
+            almacenar archivos, hacer presentaciones,
+            comunicarse mediante videollamadas y organizar tareas.
+        </p>
+
+        <p>
+            Algunas herramientas y funciones están disponibles
+            sin costo, mientras que determinadas funciones
+            avanzadas dependen del tipo de cuenta o edición
+            de Google Workspace.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CARRUSEL
+========================= -->
+
+<section class="container mb-5">
+
+    <div id="carruselGoogle"
+         class="carousel slide carousel-fade"
+         data-bs-ride="carousel"
+         data-bs-interval="4000">
+
+        <div class="carousel-indicators">
+
+            <button type="button"
+                    data-bs-target="#carruselGoogle"
+                    data-bs-slide-to="0"
+                    class="active"></button>
+
+            <button type="button"
+                    data-bs-target="#carruselGoogle"
+                    data-bs-slide-to="1"></button>
+
+            <button type="button"
+                    data-bs-target="#carruselGoogle"
+                    data-bs-slide-to="2"></button>
+
+        </div>
+
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+                <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80"
+                     class="d-block w-100"
+                     alt="Personas trabajando con tecnología">
+
+                <div class="carousel-caption">
+
+                    <h2>
+                        Tecnología para aprender
+                    </h2>
+
+                    <p>
+                        Google ofrece herramientas para estudiar
+                        y trabajar de manera colaborativa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80"
+                     class="d-block w-100"
+                     alt="Computadora y herramientas digitales">
+
+                <div class="carousel-caption">
+
+                    <h2>
+                        Productividad digital
+                    </h2>
+
+                    <p>
+                        Crea documentos, presentaciones,
+                        formularios y mucho más.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="carousel-item">
+
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80"
+                     class="d-block w-100"
+                     alt="Espacio de trabajo">
+
+                <div class="carousel-caption">
+
+                    <h2>
+                        Trabajo colaborativo
+                    </h2>
+
+                    <p>
+                        Comparte información y trabaja
+                        con otras personas desde Internet.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carruselGoogle"
+                data-bs-slide="prev">
+
+            <span class="carousel-control-prev-icon"></span>
+
+        </button>
+
+
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carruselGoogle"
+                data-bs-slide="next">
+
+            <span class="carousel-control-next-icon"></span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     15 HERRAMIENTAS
+========================= -->
+
+<section class="container pb-5">
+
+    <div class="text-center mb-5">
+
+        <h2>
+            Las 15 herramientas seleccionadas
+        </h2>
+
+        <p class="texto-gris">
+            Una explicación sencilla de para qué sirve cada una.
+        </p>
+
+    </div>
+
+
+    <div class="row g-4">
+
+
+        <!-- 1 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    ✉️
+                </div>
+
+                <h3>
+                    1. Gmail
+                </h3>
+
+                <p>
+                    Servicio de correo electrónico. Permite
+                    enviar, recibir y organizar mensajes.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    ☁️
+                </div>
+
+                <h3>
+                    2. Google Drive
+                </h3>
+
+                <p>
+                    Permite almacenar archivos en la nube
+                    y acceder a ellos desde diferentes dispositivos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    📄
+                </div>
+
+                <h3>
+                    3. Google Docs
+                </h3>
+
+                <p>
+                    Sirve para crear y editar documentos
+                    de texto de forma individual o colaborativa.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    📊
+                </div>
+
+                <h3>
+                    4. Google Sheets
+                </h3>
+
+                <p>
+                    Permite trabajar con hojas de cálculo,
+                    datos, fórmulas y gráficos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    📽️
+                </div>
+
+                <h3>
+                    5. Google Slides
+                </h3>
+
+                <p>
+                    Permite crear presentaciones con textos,
+                    imágenes, gráficos y otros elementos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    📝
+                </div>
+
+                <h3>
+                    6. Google Forms
+                </h3>
+
+                <p>
+                    Sirve para crear formularios, encuestas
+                    y cuestionarios.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    🎥
+                </div>
+
+                <h3>
+                    7. Google Meet
+                </h3>
+
+                <p>
+                    Permite realizar reuniones y videollamadas
+                    por Internet.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    📅
+                </div>
+
+                <h3>
+                    8. Google Calendar
+                </h3>
+
+                <p>
+                    Ayuda a organizar eventos, actividades,
+                    fechas y recordatorios.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    🎓
+                </div>
+
+                <h3>
+                    9. Google Classroom
+                </h3>
+
+                <p>
+                    Permite administrar clases, tareas,
+                    materiales y actividades educativas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    🌐
+                </div>
+
+                <h3>
+                    10. Google Sites
+                </h3>
+
+                <p>
+                    Permite crear sitios web sencillos
+                    sin necesidad de programar desde cero.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    💬
+                </div>
+
+                <h3>
+                    11. Google Chat
+                </h3>
+
+                <p>
+                    Permite enviar mensajes y colaborar
+                    con otras personas o equipos.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    💡
+                </div>
+
+                <h3>
+                    12. Google Keep
+                </h3>
+
+                <p>
+                    Permite crear notas, listas y recordatorios
+                    de manera rápida.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    ✅
+                </div>
+
+                <h3>
+                    13. Google Tasks
+                </h3>
+
+                <p>
+                    Ayuda a organizar actividades pendientes
+                    y administrar tareas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    ✨
+                </div>
+
+                <h3>
+                    14. Gemini
+                </h3>
+
+                <p>
+                    Asistente de inteligencia artificial
+                    que puede ayudar a generar ideas,
+                    explicar temas y realizar diferentes tareas.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="herramienta-card">
+
+                <div class="herramienta-icono">
+                    💻
+                </div>
+
+                <h3>
+                    15. Apps Script
+                </h3>
+
+                <p>
+                    Permite automatizar y programar acciones
+                    relacionadas con diferentes servicios de Google.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MENSAJE FINAL
+========================= -->
+
+<section class="seccion-azul">
+
+    <div class="container text-center">
+
+        <h2>
+            Google y la educación
+        </h2>
+
+        <p>
+            Estas herramientas pueden facilitar la organización,
+            comunicación, creación de contenido y trabajo colaborativo.
+        </p>
+
+        <a href="cuestionario.html"
+           class="btn btn-light mt-3">
+
+            Ir al cuestionario
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 GuaraFresh | Proyecto educativo
+    </p>
+
+</footer>
+
+
+<!-- Bootstrap -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript propio -->
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
+```
