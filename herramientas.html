@@ -2,770 +2,379 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herramientas de IA | GuaraFresh</title>
 
-    <title>IA de Google | GuaraFresh</title>
-
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
           rel="stylesheet">
-
-    <!-- CSS del proyecto -->
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
-<nav class="navbar navbar-expand-lg navbar-dark">
-
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
+        <a class="navbar-brand nombre-marca" href="index.html">GuaraFresh</a>
 
-        <a class="navbar-brand nombre-marca fw-bold"
-           href="index.html">
-
-            GuaraFresh
-
-        </a>
-
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#menu">
-
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
-
         </button>
 
-
         <div class="collapse navbar-collapse" id="menu">
-
             <ul class="navbar-nav ms-auto">
-
+                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                <li class="nav-item"><a class="nav-link" href="jquery.html">jQuery</a></li>
+                <li class="nav-item"><a class="nav-link" href="json.html">JSON</a></li>
+                <li class="nav-item"><a class="nav-link" href="hosting.html">Hosting</a></li>
+                <li class="nav-item"><a class="nav-link active" href="herramientas.html">IA de Google</a></li>
+                <li class="nav-item"><a class="nav-link" href="cuestionario.html">Cuestionario</a></li>
                 <li class="nav-item">
-                    <a class="nav-link"
-                       href="index.html">
-                        Inicio
-                    </a>
+                    <button id="modoOscuro" class="btn btn-modo" type="button">🌙</button>
                 </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="javascript.html">
-                        JavaScript
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="jquery.html">
-                        jQuery
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="json.html">
-                        JSON
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="hosting.html">
-                        Hosting
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link active"
-                       href="herramientas.html">
-                        IA de Google
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link"
-                       href="cuestionario.html">
-                        Cuestionario
-                    </a>
-                </li>
-
             </ul>
-
-
-            <!-- MODO CLARO / OSCURO -->
-
-            <button id="modoOscuro"
-                    class="btn btn-outline-light ms-3"
-                    type="button">
-
-                🌙
-
-            </button>
-
         </div>
-
     </div>
-
 </nav>
 
-
-<!-- =========================
-     ENCABEZADO
-========================= -->
-
-<section class="titulo-pagina">
-
+<!-- ENCABEZADO -->
+<header class="titulo-pagina">
     <div class="container">
-
-        <h1>
-            15 herramientas de IA de Google
-        </h1>
-
-        <p>
-            Inteligencia artificial para aprender,
-            crear, programar y trabajar.
-        </p>
-
+        <h1>15 herramientas de inteligencia artificial</h1>
+        <p>Descubre cómo pueden ayudarte a programar, diseñar, investigar y aprender.</p>
     </div>
+</header>
 
-</section>
-
-
-<!-- =========================
-     INTRODUCCIÓN
-========================= -->
-
+<!-- CARRUSEL CROSSFADE -->
 <section class="container py-5">
 
-    <div class="contenido">
-
-        <h2>
-            Inteligencia Artificial de Google
-        </h2>
-
-        <p>
-            Google desarrolla diferentes productos y modelos
-            de inteligencia artificial que permiten realizar
-            tareas como generar contenido, analizar información,
-            programar, crear imágenes, generar videos y trabajar
-            con diferentes tipos de información.
-        </p>
-
-        <p>
-            En esta sección presentamos 15 herramientas y
-            productos de IA del ecosistema de Google y una
-            explicación sencilla de para qué sirve cada uno.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     CARRUSEL
-========================= -->
-
-<section class="container mb-5">
-
-    <div id="carruselIA"
-         class="carousel slide carousel-fade"
-         data-bs-ride="carousel"
-         data-bs-interval="4000">
-
+    <div id="carruselIA" class="carousel slide carousel-fade"
+         data-bs-ride="carousel" data-bs-interval="4000">
 
         <div class="carousel-indicators">
-
-            <button type="button"
-                    data-bs-target="#carruselIA"
-                    data-bs-slide-to="0"
-                    class="active">
-            </button>
-
-            <button type="button"
-                    data-bs-target="#carruselIA"
-                    data-bs-slide-to="1">
-            </button>
-
-            <button type="button"
-                    data-bs-target="#carruselIA"
-                    data-bs-slide-to="2">
-            </button>
-
+            <button type="button" data-bs-target="#carruselIA"
+                    data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Diapositiva 1"></button>
+            <button type="button" data-bs-target="#carruselIA"
+                    data-bs-slide-to="1" aria-label="Diapositiva 2"></button>
+            <button type="button" data-bs-target="#carruselIA"
+                    data-bs-slide-to="2" aria-label="Diapositiva 3"></button>
         </div>
-
 
         <div class="carousel-inner">
 
-
-            <!-- IMAGEN 1 -->
-
             <div class="carousel-item active">
-
                 <img
-                    src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80"
                     class="d-block w-100"
-                    alt="Inteligencia artificial">
-
+                    alt="Tecnología y componentes electrónicos"
+                    style="height:350px;object-fit:cover;">
                 <div class="carousel-caption">
-
-                    <h2>
-                        Inteligencia Artificial
-                    </h2>
-
-                    <p>
-                        Tecnología para crear, aprender
-                        y resolver problemas.
-                    </p>
-
+                    <h2>💻 Inteligencia artificial y programación</h2>
+                    <p>Descubre herramientas que apoyan el desarrollo de software.</p>
                 </div>
-
             </div>
-
-
-            <!-- IMAGEN 2 -->
 
             <div class="carousel-item">
-
                 <img
-                    src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=1400&q=80"
                     class="d-block w-100"
-                    alt="Tecnología e inteligencia artificial">
-
+                    alt="Diseño gráfico y creatividad"
+                    style="height:350px;object-fit:cover;">
                 <div class="carousel-caption">
-
-                    <h2>
-                        Crear con IA
-                    </h2>
-
-                    <p>
-                        Genera contenido, imágenes,
-                        videos y diferentes proyectos.
-                    </p>
-
+                    <h2>🎨 Creatividad y diseño</h2>
+                    <p>Explora nuevas formas de crear interfaces e imágenes.</p>
                 </div>
-
             </div>
-
-
-            <!-- IMAGEN 3 -->
 
             <div class="carousel-item">
-
                 <img
-                    src="https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=1400&q=80"
+                    src="https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=1400&q=80"
                     class="d-block w-100"
-                    alt="Programación con inteligencia artificial">
-
+                    alt="Libros y materiales de estudio"
+                    style="height:350px;object-fit:cover;">
                 <div class="carousel-caption">
-
-                    <h2>
-                        IA y programación
-                    </h2>
-
-                    <p>
-                        Google también ofrece herramientas
-                        para desarrollar aplicaciones con IA.
-                    </p>
-
+                    <h2>📚 Investigación y aprendizaje</h2>
+                    <p>Organiza información y encuentra nuevas maneras de estudiar.</p>
                 </div>
-
             </div>
-
 
         </div>
 
-
-        <button class="carousel-control-prev"
-                type="button"
-                data-bs-target="#carruselIA"
-                data-bs-slide="prev">
-
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#carruselIA" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
-
+            <span class="visually-hidden">Anterior</span>
         </button>
 
-
-        <button class="carousel-control-next"
-                type="button"
-                data-bs-target="#carruselIA"
-                data-bs-slide="next">
-
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#carruselIA" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
-
+            <span class="visually-hidden">Siguiente</span>
         </button>
 
-
     </div>
-
 </section>
 
+<!-- CATÁLOGO -->
+<section class="container py-4" id="catalogo">
 
-<!-- =========================
-     15 IAs
-========================= -->
-
-<section class="container pb-5">
-
-
-    <div class="text-center mb-5">
-
-        <h2>
-            Las 15 IAs seleccionadas
-        </h2>
-
-        <p>
-            Conoce de manera sencilla para qué sirve cada una.
+    <div class="text-center mb-4">
+        <h2>Catálogo de herramientas</h2>
+        <p class="texto-gris">
+            Busca por nombre o selecciona una categoría.
+            Cada tarjeta tiene un enlace para visitar la herramienta.
         </p>
-
     </div>
 
-
-    <div class="row g-4">
-
-
-        <!-- 1 GEMINI -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    ✨
-                </div>
-
-                <h3>
-                    1. Gemini
-                </h3>
-
-                <p>
-                    Asistente de inteligencia artificial
-                    de Google. Puede ayudar a responder
-                    preguntas, explicar temas, generar ideas
-                    y trabajar con diferentes tipos de contenido.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 2 GEMINI NOTEBOOK -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    📚
-                </div>
-
-                <h3>
-                    2. Gemini Notebook
-                </h3>
-
-                <p>
-                    Ayuda a investigar y organizar información.
-                    Puede trabajar con materiales proporcionados
-                    por el usuario para generar resúmenes y otras
-                    formas de apoyo al estudio.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 3 AI STUDIO -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🧪
-                </div>
-
-                <h3>
-                    3. Google AI Studio
-                </h3>
-
-                <p>
-                    Plataforma para experimentar con modelos
-                    de IA de Google y crear prototipos y
-                    aplicaciones.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 4 GEMINI API -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🔌
-                </div>
-
-                <h3>
-                    4. Gemini API
-                </h3>
-
-                <p>
-                    Permite integrar capacidades de los
-                    modelos Gemini dentro de aplicaciones
-                    y proyectos de programación.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 5 FLOW -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🎬
-                </div>
-
-                <h3>
-                    5. Google Flow
-                </h3>
-
-                <p>
-                    Herramienta creativa de Google orientada
-                    a la creación de contenido audiovisual
-                    utilizando inteligencia artificial.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 6 VEO -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🎥
-                </div>
-
-                <h3>
-                    6. Veo
-                </h3>
-
-                <p>
-                    Modelo de IA de Google especializado
-                    en la generación de videos a partir
-                    de instrucciones.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 7 LYRIA -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🎵
-                </div>
-
-                <h3>
-                    7. Lyria
-                </h3>
-
-                <p>
-                    Modelo de inteligencia artificial
-                    especializado en generación de música
-                    y audio.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 8 NANO BANANA -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🍌
-                </div>
-
-                <h3>
-                    8. Nano Banana
-                </h3>
-
-                <p>
-                    Tecnología de Google para crear y editar
-                    imágenes mediante inteligencia artificial.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 9 GEMMA -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🤖
-                </div>
-
-                <h3>
-                    9. Gemma
-                </h3>
-
-                <p>
-                    Familia de modelos de IA de Google
-                    pensada para desarrolladores y proyectos
-                    que necesitan inteligencia artificial.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 10 CODE ASSIST -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    💻
-                </div>
-
-                <h3>
-                    10. Gemini Code Assist
-                </h3>
-
-                <p>
-                    Asistente de programación que ayuda
-                    a escribir, explicar y mejorar código.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 11 ANTIGRAVITY -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🚀
-                </div>
-
-                <h3>
-                    11. Google Antigravity
-                </h3>
-
-                <p>
-                    Plataforma orientada al desarrollo con
-                    agentes de inteligencia artificial y
-                    creación de proyectos.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 12 COLAB -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🐍
-                </div>
-
-                <h3>
-                    12. Google Colab
-                </h3>
-
-                <p>
-                    Entorno de programación en el navegador
-                    utilizado para trabajar con Python,
-                    datos y proyectos de inteligencia artificial.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 13 GEMINI GMAIL -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    ✉️
-                </div>
-
-                <h3>
-                    13. Gemini en Gmail
-                </h3>
-
-                <p>
-                    Funciones de IA integradas en Gmail
-                    que ayudan con la redacción y comprensión
-                    de correos electrónicos.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 14 GEMINI DOCS -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    📄
-                </div>
-
-                <h3>
-                    14. Gemini en Docs
-                </h3>
-
-                <p>
-                    Ayuda a crear, redactar y trabajar
-                    con documentos utilizando inteligencia artificial.
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <!-- 15 GEMINI MEET -->
-
-        <div class="col-md-6 col-lg-4">
-
-            <div class="card-info">
-
-                <div class="icono">
-                    🎙️
-                </div>
-
-                <h3>
-                    15. Gemini en Meet
-                </h3>
-
-                <p>
-                    Funciones de IA para reuniones que pueden
-                    ayudar a generar notas y resumir conversaciones.
-                </p>
-
-            </div>
-
-        </div>
-
-
+    <div class="buscador-ia">
+        <input type="search" id="buscarIA" class="form-control"
+               placeholder="🔎 Buscar herramienta..."
+               aria-label="Buscar herramienta">
     </div>
 
-</section>
-
-
-<!-- =========================
-     CONCLUSIÓN
-========================= -->
-
-<section class="seccion-azul">
-
-    <div class="container text-center">
-
-        <h2>
-            La IA como herramienta
-        </h2>
-
-        <p>
-            Las herramientas de inteligencia artificial de Google
-            pueden utilizarse para aprender, crear contenido,
-            programar, investigar y mejorar la productividad.
-        </p>
-
-        <a href="cuestionario.html"
-           class="btn btn-light mt-3">
-
-            Realizar cuestionario
-
-        </a>
-
+    <div class="filtros-ia">
+        <button class="filtro-btn activo" data-filtro="todas">Todas</button>
+        <button class="filtro-btn" data-filtro="programacion">Programación</button>
+        <button class="filtro-btn" data-filtro="diseno">Diseño y contenido</button>
+        <button class="filtro-btn" data-filtro="productividad">Productividad</button>
+        <button class="filtro-btn" data-filtro="educacion">Educación</button>
     </div>
 
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <p>
-        © 2026 GuaraFresh | Proyecto educativo
+    <p id="contadorIA" class="text-center fw-bold" aria-live="polite">
+        Mostrando 15 herramientas
     </p>
 
+    <div class="row g-4" id="listaIA"></div>
+
+    <div id="sinResultados" class="text-center py-5" hidden>
+        <h3>No se encontraron herramientas</h3>
+        <p>Prueba otra búsqueda o cambia el filtro.</p>
+    </div>
+
+</section>
+
+<!-- CONCLUSIÓN -->
+<section class="seccion-azul">
+    <div class="container text-center">
+        <h2>La IA como apoyo para aprender</h2>
+        <p>
+            Estas herramientas pueden apoyar la creatividad, la investigación
+            y la programación. Sus resultados deben revisarse y utilizarse
+            responsablemente.
+        </p>
+        <a href="index.html" class="btn btn-light mt-3">Volver al inicio</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 GuaraFresh | Proyecto educativo</p>
 </footer>
 
-
-<!-- Bootstrap -->
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-
-<!-- JavaScript -->
-
 <script src="js/script.js"></script>
 
+<script>
+const herramientas = [
+    {
+        nombre: "Google Antigravity",
+        icono: "🚀",
+        categoria: "programacion",
+        descripcion: "Entorno de desarrollo enfocado en agentes autónomos para programar, refactorizar y probar aplicaciones.",
+        url: "https://antigravity.google/"
+    },
+    {
+        nombre: "Pomelli",
+        icono: "📢",
+        categoria: "diseno",
+        descripcion: "Analiza la identidad de una marca para ayudar a crear contenido de marketing y anuncios.",
+        url: "https://labs.google.com/u/0/pomelli/"
+    },
+    {
+        nombre: "Stitch",
+        icono: "🎨",
+        categoria: "diseno",
+        descripcion: "Convierte instrucciones de texto en diseños de interfaces para aplicaciones y sitios web.",
+        url: "https://stitch.withgoogle.com/"
+    },
+    {
+        nombre: "Google Opal",
+        icono: "⚙️",
+        categoria: "productividad",
+        descripcion: "Permite crear pequeños flujos de trabajo y aplicaciones mediante instrucciones en lenguaje natural.",
+        url: "https://opal.google/"
+    },
+    {
+        nombre: "Mixboard",
+        icono: "🖼️",
+        categoria: "diseno",
+        descripcion: "Espacio visual para explorar ideas y crear composiciones de imágenes con ayuda de IA.",
+        url: "https://labs.google/fx/tools/mixboard/"
+    },
+    {
+        nombre: "Google AI Studio",
+        icono: "🧠",
+        categoria: "programacion",
+        descripcion: "Permite probar modelos Gemini y crear prototipos de aplicaciones con IA.",
+        url: "https://aistudio.google.com/"
+    },
+    {
+        nombre: "NotebookLM",
+        icono: "📚",
+        categoria: "educacion",
+        descripcion: "Organiza fuentes y documentos para ayudar a resumir, estudiar y responder preguntas sobre ellos.",
+        url: "https://notebooklm.google.com/"
+    },
+    {
+        nombre: "Jules",
+        icono: "👨‍💻",
+        categoria: "programacion",
+        descripcion: "Agente de programación que ayuda a trabajar en tareas de desarrollo y corrección de errores.",
+        url: "https://jules.google/"
+    },
+    {
+        nombre: "Gemini CLI",
+        icono: "💻",
+        categoria: "programacion",
+        descripcion: "Herramienta de línea de comandos para utilizar Gemini desde una terminal.",
+        url: "https://github.com/google-gemini/gemini-cli"
+    },
+    {
+        nombre: "Google Flow",
+        icono: "🎬",
+        categoria: "diseno",
+        descripcion: "Herramienta creativa que permite generar y editar contenido audiovisual con modelos de IA.",
+        url: "https://labs.google/fx/tools/flow/"
+    },
+    {
+        nombre: "Gemini Code Assist (Personal)",
+        icono: "🧑‍💻",
+        categoria: "programacion",
+        descripcion: "Asistente de programación que ofrece sugerencias y ayuda para escribir y comprender código.",
+        url: "https://codeassist.google/"
+    },
+    {
+        nombre: "Disco",
+        icono: "🔎",
+        categoria: "productividad",
+        descripcion: "Experimento de navegación que explora nuevas formas de organizar información con IA.",
+        url: "https://labs.google/"
+    },
+    {
+        nombre: "Learn Your Way",
+        icono: "📖",
+        categoria: "educacion",
+        descripcion: "Proyecto de aprendizaje experimental que adapta materiales educativos a las necesidades del estudiante.",
+        url: "https://learnyourway.google/"
+    },
+    {
+        nombre: "Gemini Gems",
+        icono: "💎",
+        categoria: "productividad",
+        descripcion: "Permite crear asistentes personalizados para tareas y necesidades concretas.",
+        url: "https://gemini.google.com/"
+    },
+    {
+        nombre: "Firebase Studio",
+        icono: "🔥",
+        categoria: "programacion",
+        descripcion: "Entorno de desarrollo asistido por IA para prototipar y trabajar en aplicaciones web.",
+        url: "https://studio.firebase.google.com/"
+    }
+];
+
+const listaIA = document.getElementById("listaIA");
+const buscarIA = document.getElementById("buscarIA");
+const contadorIA = document.getElementById("contadorIA");
+const sinResultados = document.getElementById("sinResultados");
+const botonesFiltro = document.querySelectorAll(".filtro-btn");
+
+let filtroActual = "todas";
+
+function dibujarHerramientas() {
+    const busqueda = buscarIA.value.trim().toLowerCase();
+
+    const resultados = herramientas.filter(function (herramienta) {
+        const coincideTexto =
+            (herramienta.nombre + " " + herramienta.descripcion)
+            .toLowerCase().includes(busqueda);
+
+        const coincideCategoria =
+            filtroActual === "todas" ||
+            herramienta.categoria === filtroActual;
+
+        return coincideTexto && coincideCategoria;
+    });
+
+    listaIA.innerHTML = "";
+
+    resultados.forEach(function (herramienta) {
+        const columna = document.createElement("div");
+        columna.className = "col-md-6 col-lg-4";
+
+        const tarjeta = document.createElement("article");
+        tarjeta.className = "ia-card";
+
+        const icono = document.createElement("div");
+        icono.className = "ia-icono";
+        icono.textContent = herramienta.icono;
+
+        const categoria = document.createElement("span");
+        categoria.className = "ia-categoria";
+
+        const nombresCategoria = {
+            programacion: "Programación",
+            diseno: "Diseño y contenido",
+            productividad: "Productividad",
+            educacion: "Educación"
+        };
+
+        categoria.textContent = nombresCategoria[herramienta.categoria];
+
+        const titulo = document.createElement("h3");
+        titulo.textContent = herramienta.nombre;
+
+        const descripcion = document.createElement("p");
+        descripcion.textContent = herramienta.descripcion;
+
+        const enlace = document.createElement("a");
+        enlace.className = "btn btn-principal";
+        enlace.href = herramienta.url;
+        enlace.target = "_blank";
+        enlace.rel = "noopener noreferrer";
+        enlace.textContent = "Visitar herramienta ↗";
+
+        tarjeta.append(icono, categoria, titulo, descripcion, enlace);
+        columna.appendChild(tarjeta);
+        listaIA.appendChild(columna);
+    });
+
+    contadorIA.textContent =
+        `Mostrando ${resultados.length} de ${herramientas.length} herramientas`;
+
+    sinResultados.hidden = resultados.length !== 0;
+}
+
+buscarIA.addEventListener("input", dibujarHerramientas);
+
+botonesFiltro.forEach(function (boton) {
+    boton.addEventListener("click", function () {
+        filtroActual = boton.dataset.filtro;
+
+        botonesFiltro.forEach(function (otro) {
+            otro.classList.remove("activo");
+        });
+
+        boton.classList.add("activo");
+        dibujarHerramientas();
+    });
+});
+
+dibujarHerramientas();
+</script>
 
 </body>
-
 </html>
-```

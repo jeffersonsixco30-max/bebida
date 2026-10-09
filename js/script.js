@@ -1,125 +1,83 @@
 ```javascript
 document.addEventListener("DOMContentLoaded", function () {
-
-    console.log("GuaraFresh cargado correctamente.");
-
-
-    /* =========================
-       MODO OSCURO / CLARO
-    ========================= */
-
     const botonModo = document.getElementById("modoOscuro");
+    const cuerpo = document.body;
 
-    if (botonModo) {
-
-        // Revisar si el usuario ya había elegido un modo
-
-        const modoGuardado = localStorage.getItem("modo");
-
-        if (modoGuardado === "oscuro") {
-
-            document.body.classList.add("modo-oscuro");
-
-            botonModo.innerHTML = "☀️";
-
-        }
-
-
-        botonModo.addEventListener("click", function () {
-
-            document.body.classList.toggle("modo-oscuro");
-
-
-            if (document.body.classList.contains("modo-oscuro")) {
-
-                botonModo.innerHTML = "☀️";
-
-                localStorage.setItem("modo", "oscuro");
-
-            } else {
-
-                botonModo.innerHTML = "🌙";
-
-                localStorage.setItem("modo", "claro");
-
-            }
-
-        });
-
+    // Recuperar el tema guardado
+    const temaGuardado = localStorage.getItem("modo");
+    if (temaGuardado === "oscuro") {
+        cuerpo.classList.add("modo-oscuro");
     }
 
+    function actualizarBoton() {
+        if (!botonModo) return;
 
-    /* =========================
-       ANIMACIONES AL HACER SCROLL
-    ========================= */
+        const oscuro = cuerpo.classList.contains("modo-oscuro");
+        botonModo.textContent = oscuro ? "☀️" : "🌙";
+        botonModo.setAttribute(
+            "aria-label",
+            oscuro ? "Activar modo claro" : "Activar modo oscuro"
+        );
+    }
 
+    actualizarBoton();
+
+    // Cambiar tema
+    if (botonModo) {
+        botonModo.addEventListener("click", function () {
+            cuerpo.classList.toggle("modo-oscuro");
+
+            const tema = cuerpo.classList.contains("modo-oscuro")
+                ? "oscuro"
+                : "claro";
+
+            localStorage.setItem("modo", tema);
+            actualizarBoton();
+        });
+    }
+
+    // Animaciones de entrada
     const elementos = document.querySelectorAll(
-        ".card-info, .herramienta-card, .contenido"
+        ".card-info, .contenido, .herramienta-card, .ia-card, .animar"
     );
 
-
-    elementos.forEach(function (elemento) {
-
-        elemento.classList.add("animar");
-
-    });
-
-
-    const observer = new IntersectionObserver(
-
-        function (entradas) {
-
+    if ("IntersectionObserver" in window) {
+        const observador = new IntersectionObserver(function (entradas) {
             entradas.forEach(function (entrada) {
-
                 if (entrada.isIntersecting) {
-
                     entrada.target.classList.add("visible");
-
+                    observador.unobserve(entrada.target);
                 }
-
             });
+        }, { threshold: 0.12 });
 
-        },
+        elementos.forEach(function (elemento) {
+            elemento.classList.add("animar");
+            observador.observe(elemento);
+        });
+    } else {
+        elementos.forEach(function (elemento) {
+            elemento.classList.add("visible");
+        });
+    }
 
-        {
-            threshold: 0.15
-        }
-
-    );
-
-
-    elementos.forEach(function (elemento) {
-
-        observer.observe(elemento);
-
-    });
-
-
-    /* =========================
-       NAVEGACIÓN SUAVE
-    ========================= */
-
+    // Navegación suave para enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(function (enlace) {
-
         enlace.addEventListener("click", function (evento) {
+            const selector = enlace.getAttribute("href");
 
-            const destino = document.querySelector(
-                this.getAttribute("href")
-            );
+            if (!selector || selector === "#") return;
+
+            const destino = document.querySelector(selector);
 
             if (destino) {
-
                 evento.preventDefault();
-
                 destino.scrollIntoView({
-                    behavior: "smooth"
+                    behavior: "smooth",
+                    block: "start"
                 });
-
             }
-
         });
-
     });
-
 });
 ```

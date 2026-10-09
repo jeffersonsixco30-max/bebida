@@ -6,23 +6,19 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 85px;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #f4f8fb;
     color: #172a3a;
-    transition: background 0.4s ease, color 0.4s ease;
+    transition: background .35s ease, color .35s ease;
 }
-
-
-/* =========================
-   NAVBAR
-========================= */
 
 .navbar {
     background: #172a3a;
-    padding: 15px 0;
+    padding: 14px 0;
 }
 
 .nombre-marca {
@@ -32,20 +28,20 @@ body {
 
 .nav-link {
     color: white !important;
-    margin-left: 10px;
-    transition: 0.3s;
+    margin-left: 8px;
+    transition: color .25s ease;
 }
 
-.nav-link:hover {
-    color: #2a9d8f !important;
+.nav-link:hover,
+.nav-link.active {
+    color: #4ecdc4 !important;
 }
 
 .btn-modo {
-    margin-left: 15px;
+    margin-left: 10px;
     border: 1px solid white;
     color: white;
-    border-radius: 20px;
-    transition: 0.3s;
+    border-radius: 22px;
 }
 
 .btn-modo:hover {
@@ -53,34 +49,27 @@ body {
     color: #172a3a;
 }
 
-
-/* =========================
-   HERO
-========================= */
-
 .hero {
-    min-height: 600px;
+    min-height: 560px;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 70px 20px;
+    color: white;
     background:
         linear-gradient(
             135deg,
-            rgba(23, 42, 58, 0.92),
-            rgba(0, 119, 182, 0.85),
-            rgba(42, 157, 143, 0.85)
+            rgba(23,42,58,.92),
+            rgba(0,119,182,.84),
+            rgba(42,157,143,.86)
         ),
         url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80");
-
     background-size: cover;
     background-position: center;
-
-    color: white;
 }
 
 .hero h1 {
-    font-size: 70px;
+    font-size: clamp(45px, 7vw, 70px);
     font-weight: bold;
     margin: 20px 0;
 }
@@ -92,366 +81,168 @@ body {
 .hero p {
     max-width: 700px;
     margin: auto;
-    font-size: 19px;
-    line-height: 1.7;
+    font-size: 18px;
+    line-height: 1.8;
 }
-
-
-/* =========================
-   BOTONES
-========================= */
 
 .btn-principal {
     background: #2a9d8f;
     color: white;
     border: none;
-    padding: 12px 25px;
-    margin-top: 25px;
-    border-radius: 30px;
-    transition: 0.3s;
+    padding: 12px 24px;
+    margin-top: 18px;
+    border-radius: 28px;
+    transition: transform .25s ease, background .25s ease;
 }
 
 .btn-principal:hover {
-    background: #238276;
+    background: #207e73;
     color: white;
     transform: translateY(-3px);
 }
 
-
-/* =========================
-   TÍTULOS
-========================= */
-
 .titulo-pagina {
-    background:
-        linear-gradient(
-            135deg,
-            #172a3a,
-            #0077b6
-        );
-
+    background: linear-gradient(135deg, #172a3a, #0077b6);
     color: white;
     text-align: center;
-    padding: 80px 20px;
+    padding: 65px 20px;
 }
 
 .titulo-pagina h1 {
-    font-size: 50px;
+    font-size: clamp(35px, 5vw, 50px);
     font-weight: bold;
 }
 
-.titulo-pagina p {
-    font-size: 18px;
-}
-
-
-/* =========================
-   TARJETAS
-========================= */
-
-.card-info {
+.card-info,
+.contenido,
+.herramienta-card,
+.ia-card {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
+    color: #172a3a;
+    padding: 28px;
+    border-radius: 16px;
     height: 100%;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-
+    box-shadow: 0 5px 20px rgba(0,0,0,.07);
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease,
+        color .3s ease;
 }
 
-.card-info:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.13);
+.card-info:hover,
+.herramienta-card:hover,
+.ia-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,.13);
 }
 
-.card-info h3 {
-    color: #0077b6;
-    margin-bottom: 15px;
-}
-
-.icono {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-
-/* =========================
-   CONTENIDO
-========================= */
-
-.contenido {
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
-
-    transition:
-        background 0.4s ease,
-        color 0.4s ease;
-}
-
+.card-info h3,
+.herramienta-card h3,
+.ia-card h3,
 .contenido h2 {
     color: #0077b6;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
+.card-info p,
+.herramienta-card p,
+.ia-card p,
 .contenido p {
     line-height: 1.8;
 }
 
-
-/* =========================
-   CÓDIGO
-========================= */
-
-.codigo {
-    background: #172a3a;
-    color: white;
-    padding: 30px;
-    margin-top: 30px;
-    border-radius: 15px;
+.icono,
+.herramienta-icono,
+.ia-icono {
+    font-size: 42px;
+    margin-bottom: 15px;
 }
 
-.codigo h3 {
-    margin-bottom: 20px;
+.texto-gris {
+    color: #667781;
 }
-
-pre {
-    background: #101b25;
-    padding: 20px;
-    border-radius: 10px;
-    overflow-x: auto;
-}
-
-code {
-    color: #9ef01a;
-}
-
-
-/* =========================
-   JQUERY
-========================= */
-
-.mensaje {
-    background: #e8f7f5;
-    color: #172a3a;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    font-size: 18px;
-}
-
-
-/* =========================
-   SECCIÓN AZUL
-========================= */
 
 .seccion-azul {
     background: #0077b6;
     color: white;
-    padding: 70px 20px;
+    padding: 65px 20px;
 }
 
 .seccion-azul h2 {
     margin-bottom: 15px;
 }
 
-
-/* =========================
-   CARRUSEL
-========================= */
-
-#carruselGoogle {
-    border-radius: 20px;
+#carruselIA {
     overflow: hidden;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
-}
-
-#carruselGoogle img {
-    height: 450px;
-    object-fit: cover;
-}
-
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.58);
-    border-radius: 15px;
-    padding: 20px;
-    bottom: 30px;
-}
-
-.carousel-caption h2 {
-    font-weight: bold;
-}
-
-
-/* =========================
-   TARJETAS GOOGLE
-========================= */
-
-.herramienta-card {
-    background: white;
-    height: 100%;
-    padding: 30px;
-
     border-radius: 18px;
-
-    box-shadow:
-        0 5px 20px rgba(0, 0, 0, 0.08);
-
-    border-top: 4px solid #2a9d8f;
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
-.herramienta-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.14);
+#carruselIA .carousel-item {
+    min-height: 320px;
+    background: linear-gradient(135deg, #172a3a, #0077b6, #2a9d8f);
 }
 
-.herramienta-icono {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.herramienta-card h3 {
-    color: #0077b6;
-    margin-bottom: 15px;
-}
-
-.herramienta-card p {
-    line-height: 1.7;
-}
-
-
-/* =========================
-   TEXTO GRIS
-========================= */
-
-.texto-gris {
-    color: #667781;
-}
-
-
-/* =========================
-   TABLA
-========================= */
-
-.table {
-    background: white;
-}
-
-.table pre {
-    margin: 0;
-}
-
-
-/* =========================
-   DOMINIO
-========================= */
-
-.dominio {
-    background: #172a3a;
-    color: #9ef01a;
+#carruselIA .carousel-caption {
+    background: rgba(0,0,0,.55);
+    border-radius: 14px;
     padding: 20px;
-    border-radius: 10px;
-    font-size: 25px;
-    text-align: center;
-    margin: 20px 0;
+    bottom: 35px;
 }
 
+.herramienta-card,
+.ia-card {
+    border-top: 4px solid #2a9d8f;
+}
 
-/* =========================
-   FLUJO DNS
-========================= */
+.ia-categoria {
+    display: inline-block;
+    background: #e8f7f5;
+    color: #176e66;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
 
-.flujo {
+.filtros-ia {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    margin: 30px 0;
+    margin: 24px 0;
 }
 
-.flujo div {
-    background: #0077b6;
-    color: white;
-    padding: 15px 30px;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-.flujo span {
-    font-size: 25px;
-}
-
-
-/* =========================
-   CUESTIONARIO
-========================= */
-
-.pregunta {
-    background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 15px;
-
-    box-shadow:
-        0 4px 15px rgba(0, 0, 0, 0.06);
-}
-
-.pregunta h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.pregunta label {
-    display: block;
-    padding: 10px;
-    margin: 5px 0;
-
-    background: #f4f8fb;
-
-    border-radius: 8px;
-
+.filtro-btn {
+    border: 1px solid #2a9d8f;
+    background: transparent;
+    color: #207e73;
+    border-radius: 24px;
+    padding: 9px 16px;
     cursor: pointer;
 }
 
-.pregunta label:hover {
-    background: #dff3f0;
+.filtro-btn:hover,
+.filtro-btn.activo {
+    background: #2a9d8f;
+    color: white;
 }
 
-#resultado {
-    margin-top: 30px;
-    padding: 25px;
-
-    border-radius: 15px;
-
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+.buscador-ia {
+    max-width: 650px;
+    margin: auto;
 }
 
-
-/* =========================
-   ANIMACIONES
-========================= */
+.buscador-ia input {
+    padding: 13px 17px;
+    border-radius: 25px;
+}
 
 .animar {
     opacity: 0;
-    transform: translateY(25px);
-
-    transition:
-        opacity 0.7s ease,
-        transform 0.7s ease;
+    transform: translateY(20px);
+    transition: opacity .6s ease, transform .6s ease;
 }
 
 .animar.visible {
@@ -459,90 +250,85 @@ code {
     transform: translateY(0);
 }
 
-
-/* =========================
-   MODO OSCURO
-========================= */
-
-body.modo-oscuro {
-    background: #101820;
-    color: #e9f1f5;
+[hidden] {
+    display: none !important;
 }
-
-body.modo-oscuro .contenido,
-body.modo-oscuro .card-info,
-body.modo-oscuro .herramienta-card,
-body.modo-oscuro .pregunta {
-    background: #1b2a34;
-    color: #e9f1f5;
-}
-
-body.modo-oscuro .texto-gris {
-    color: #b9c7ce;
-}
-
-body.modo-oscuro .herramienta-card h3,
-body.modo-oscuro .card-info h3,
-body.modo-oscuro .contenido h2 {
-    color: #4ecdc4;
-}
-
-body.modo-oscuro .pregunta label {
-    background: #263944;
-    color: white;
-}
-
-body.modo-oscuro .pregunta label:hover {
-    background: #31505e;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
 
 footer {
     background: #172a3a;
     color: white;
     text-align: center;
     padding: 25px;
-    margin-top: 50px;
+    margin-top: 45px;
 }
 
+/* MODO OSCURO */
 
-/* =========================
-   RESPONSIVE
-========================= */
+body.modo-oscuro {
+    background: #101820;
+    color: #e9f1f5;
+}
+
+body.modo-oscuro .card-info,
+body.modo-oscuro .contenido,
+body.modo-oscuro .herramienta-card,
+body.modo-oscuro .ia-card {
+    background: #1b2a34;
+    color: #e9f1f5;
+}
+
+body.modo-oscuro .card-info h3,
+body.modo-oscuro .contenido h2,
+body.modo-oscuro .herramienta-card h3,
+body.modo-oscuro .ia-card h3 {
+    color: #4ecdc4;
+}
+
+body.modo-oscuro .texto-gris {
+    color: #c0cbd1;
+}
+
+body.modo-oscuro .ia-categoria {
+    background: #263944;
+    color: #9de6df;
+}
+
+body.modo-oscuro .buscador-ia input {
+    background: #1b2a34;
+    color: white;
+    border-color: #4ecdc4;
+}
+
+body.modo-oscuro .buscador-ia input::placeholder {
+    color: #c0cbd1;
+}
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 450px;
+    }
 
     .hero h1 {
-        font-size: 45px;
+        font-size: 44px;
     }
 
-    .titulo-pagina h1 {
-        font-size: 38px;
+    #carruselIA .carousel-item {
+        min-height: 290px;
     }
 
-    .hero {
-        padding: 80px 20px;
+    #carruselIA .carousel-caption {
+        bottom: 15px;
+        padding: 12px;
     }
-
-    #carruselGoogle img {
-        height: 300px;
-    }
-
-    .carousel-caption {
-        bottom: 10px;
-        padding: 10px;
-    }
-
-    .carousel-caption h2 {
-        font-size: 20px;
-    }
-
-    .carousel-caption p {
-        font-size: 13px;
-    }
-
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}
+
